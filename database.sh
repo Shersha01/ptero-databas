@@ -44,8 +44,8 @@ python ./replace.py
 
 rm ./replace.py
 
-systemctl restart mysql 
-systemctl restart mariadb
+sudo systemctl restart mysql 
+sudo systemctl restart mariadb
 
 echo ""
 
@@ -71,11 +71,23 @@ echo "CREATING DATABASE.."
 
 mysql -e "create user '$db_username'@'%' identified by '$db_password'; grant all privileges on *.* to '$db_username'@'%' with grant option; flush privileges;"
 
-systemctl restart mysql 
-systemctl restart mariadb
+sudo systemctl restart mysql 
+sudo systemctl restart mariadb
 
 /bin/sleep 3
 echo ""
 echo "Successfully Created A Database For Your Pterodactyl! With Username ($db_username) and Password ($db_password)!"
 echo ""
 echo "Make Sure To Support us - https://discord.gg/dnxrg"
+
+echo ""
+echo "Now Run Theese Commands IN ORDER For This To Work!"
+echo ""
+echo "sudo systemctl restart mysql"
+echo "" 
+echo "sudo systemctl restart mariadb"
+
+/bin/sleep 2
+
+sudo systemctl restart mysql 
+sudo systemctl restart mariadb
