@@ -11,7 +11,7 @@ fi
 # ...
 
 
-apt install toilet figlet -y
+apt install toilet -y
 
 apt install python -y
 
@@ -44,6 +44,9 @@ python ./replace.py
 
 rm ./replace.py
 
+systemctl restart mysql 
+systemctl restart mariadb
+
 echo ""
 
 echo "ENTER THE USER YOU WANT FOR PTERODACTYL."
@@ -67,6 +70,10 @@ echo "CREATING DATABASE.."
 /bin/sleep 3
 
 mysql -e "create user '$db_username'@'%' identified by '$db_password'; grant all privileges on *.* to '$db_username'@'%' with grant option; flush privileges;"
+
+systemctl restart mysql 
+systemctl restart mariadb
+
 /bin/sleep 3
 echo ""
 echo "Successfully Created A Database For Your Pterodactyl! With Username ($db_username) and Password ($db_password)!"
