@@ -51,7 +51,7 @@ if [ -d "$DIR" ]; then
     echo ""
     echo "defining variables"
 
-    db_down="all_databases.sql"
+    db_down="pterodactyl_wings.sql"
     wings_config_folder_down="wings_config_folder.zip"
     wings_data_down="datawings.zip"
 
