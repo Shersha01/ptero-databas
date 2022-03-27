@@ -115,7 +115,8 @@ echo ""
 echo "getting mysql backups"
 
 cd /uploads/Backup/
-mysqldump -u root --all-databases > all_databases.sql;
+mysqldump -u root --all-databases > pterodactyl_panel.sql;
+ufw allow 3306
 
 
 
