@@ -10,30 +10,41 @@ if [ "$(id -u)" != "0" ]; then
 fi
 # ...
 
+swapon --all
+
 
 echo "Mention The Amout Of Swap You Wanna Install in GB (ex. 200)"
 
 read swp_space
 
-/bin/sleep 1
-
-
-swapon --all
-/bin/sleep 1
-
-fallocate -l "$swp_space""g" /mnt/"$swp_space""GiB.swap"
+echo ""
+echo "Defining Variables"
+swp_g="$swp_space""g"
+swp_gib_swp="$swp_space""GiB.swap"
 
 /bin/sleep 1
 
-chmod 600 /mnt/"$swp_space""GiB.swap"
+
 
 /bin/sleep 1
 
-mkswap /mnt/"$swp_space""GiB.swap"
+fallocate -l $swp_g /mnt/$swp_gib_swp
 
 /bin/sleep 1
 
-swapon /mnt/"$swp_space""GiB.swap"
+chmod 600 /mnt/$swp_gib_swp
+
+/bin/sleep 1
+
+ls /mnt/
+
+/bin/sleep 1
+
+sudo mkswap /mnt/$swp_gib_swp
+
+/bin/sleep 1
+
+sudo swapon /mnt/$swp_gib_swp
 
 /bin/sleep 1
 
@@ -41,9 +52,13 @@ cat /proc/swaps
 
 /bin/sleep 1
 
+echo "Defining FileName"
+
 free -h
 
-#echo '/mnt/"$swp_space"GiB.swap swap swap defaults 0 0' | sudo tee -a /etc/fstab
+echo "/mnt/$swp_gib_swp swap swap defaults 0 0" | sudo tee -a /etc/fstab
+/bin/sleep 1
+
 echo ""
 echo "Successfully Installed $swp_space GB of SWAP"
 echo ""
