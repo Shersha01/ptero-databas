@@ -54,7 +54,7 @@ echo ""
 
 echo "getting all those volumes and data of wings"
 cd /var/lib/pterodactyl/
-apt install zip unzip -y 
+apt install zip zip -y 
 
 echo ""
 echo "Trying To Zip all The Wings data"
@@ -66,6 +66,7 @@ echo "it might takes few minutes according to the size of wings."
 
 
 zip -r datawings.zip * /uploads/Backup/
+mv datawings.zip /uploads/Backup/
 
 echo ""
 echo "trying to get the system extrernal ip..."
@@ -101,6 +102,7 @@ echo "getting the wings config files"
 cd /etc/pterodactyl/
 
 zip -r wings_config_folder.zip * /uploads/Backup/
+mv wings_config_folder.zip /uploads/Backup/
 
 
 /bin/sleep 1
