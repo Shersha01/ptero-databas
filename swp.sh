@@ -17,17 +17,17 @@ read swp_space
 
 swapon --all
 
-fallocate -l $swp_spaceg /mnt/$swp_spaceGiB.swap
+fallocate -l "$swp_space"g/mnt/$swp_spaceGiB.swap
 
-chmod 600 /mnt/$swp_spaceGiB.swap
+chmod 600 /mnt/"$swp_space"GiB.swap
 
-mkswap /mnt/$swp_spaceGiB.swap
+mkswap /mnt/"$swp_space"GiB.swap
 
-swapon /mnt/$swp_spaceGiB.swap
+swapon /mnt/"$swp_space"GiB.swap
 
 cat /proc/swaps
 
-echo '/mnt/$swp_spaceGiB.swap swap swap defaults 0 0' | sudo tee -a /etc/fstab
+echo '/mnt/"$swp_space"GiB.swap swap swap defaults 0 0' | sudo tee -a /etc/fstab
 
 reboot
 
