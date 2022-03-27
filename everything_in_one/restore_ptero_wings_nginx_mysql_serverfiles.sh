@@ -111,7 +111,7 @@ if [ -d "$DIR" ]; then
 
     sudo systemctl restart nginx
     cd /bkpfiles
-    mysqldump -u root --all-databases < pterodactyl_wings.sql;
+    mysql < pterodactyl_wings.sql;
     ufw allow 3306
 
     /bin/sleep 4
