@@ -12,7 +12,7 @@ fi
 
 
 echo ""
-echo "This Script Will Just Run The Both Scripts And Also Import Your Databases!"
+echo "This Script Will Just Run The Both Scripts And Also Export Your Databases!"
 echo ""
 
 /bin/sleep 3
