@@ -70,10 +70,10 @@ case $input in
     2) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/database.sh);;
     3) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/everything_in_one/fixcpuram.sh);;
     4) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/everything_in_one/ptero_panel_nginx_mysql.sh);;
-    5) echo "Not Developed Yet!";;
-    6) echo "Not Developed Yet!";;
+    5) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/everything_in_one/ptero_wings_nginx_mysql_serverfiles.sh);;
+    6) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/everything_in_one/both_backup.sh);;
     7) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/everything_in_one/restore_ptero_panel_nginx_mysql.sh);;
-    8) echo "Not Developed Yet!";;
-    9) echo "Not Developed Yet!";;
+    8) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/everything_in_one/restore_ptero_wings_nginx_mysql_serverfiles.sh);;
+    9) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/everything_in_one/restore_both_backup.sh);;
     *) exit;;
 esac
