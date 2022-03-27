@@ -12,6 +12,8 @@ fi
 
 swapon --all
 
+clear
+
 
 echo "Mention The Amout Of Swap You Wanna Install in GB (ex. 200)"
 
