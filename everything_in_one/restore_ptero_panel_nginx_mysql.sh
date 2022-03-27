@@ -51,7 +51,7 @@ if [ -d "$DIR" ]; then
     echo ""
     echo "defining variables"
 
-    db_down="all_databases.sql"
+    db_down="pterodactyl_panel.sql"
     ptero_conf_down="pterodactyl.conf"
     env_file_down=".env"
 
