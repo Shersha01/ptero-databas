@@ -22,7 +22,8 @@ apt install figlet toilet -y
 wings_version="1.6.1"
 panel_version="1.7.0"
 
-
+ufw allow 3306
+ufw allow 8001
 clear
 
 figlet -c Life is EZ Now
