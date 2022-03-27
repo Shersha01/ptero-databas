@@ -99,7 +99,7 @@ echo ""
 echo "Getting ssl files. (make sure this fqdn is correct becoz we dont check it like ptero script)"
 
 
-cp -r /etc/letsencrypt/live/$sys_ptero_domain /uploads/Backup/
+# cp -r /etc/letsencrypt/live/$sys_ptero_domain /uploads/Backup/
 
 /bin/sleep 1
 
@@ -115,7 +115,7 @@ echo ""
 echo "getting mysql backups"
 
 cd /uploads/Backup/
-mysql -e "mysqldump -u root -p --all-databases > all_databases.sql;"
+mysqldump -u root --all-databases > all_databases.sql;
 
 
 
@@ -128,6 +128,10 @@ echo "# Things You Have To Remeber                                              
 echo "#                                                                                        #"
 echo "#1) Your BackupURI is http://$sys_ip:8001/Backup/   (Case Sensitive Data)                #"
 echo "#2) Make Sure You've Inputted The Correct Panel Domain - $sys_ptero_domain               #"
+echo "#                                                                                        #"
+echo "# Warning: If You Have Firewalls Settupped Please Disable all of Them or Allow Ports!!   #"
+echo "#                                                                                        #"
+echo "#                                                                                        #"
 echo "#                                                                                        #"
 echo "# If You Find Any Issues Regarding This, Please Report at - https://dnxrg.net/discord    #"
 echo "#                                                                                        #"
