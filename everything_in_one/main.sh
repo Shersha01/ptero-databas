@@ -72,7 +72,7 @@ case $input in
     4) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/everything_in_one/ptero_panel_nginx_mysql.sh);;
     5) echo "Not Developed Yet!";;
     6) echo "Not Developed Yet!";;
-    7) echo "Not Developed Yet!";;
+    7) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/everything_in_one/restore_ptero_panel_nginx_mysql.sh);;
     8) echo "Not Developed Yet!";;
     9) echo "Not Developed Yet!";;
     *) exit;;
