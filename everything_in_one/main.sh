@@ -69,7 +69,7 @@ case $input in
     1) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/swp.sh);;
     2) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/database.sh);;
     3) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/everything_in_one/fixcpuram.sh);;
-    4) echo "Not Developed Yet!";;
+    4) bash <(curl -s https://raw.githubusercontent.com/NotRoyadma/ptero_database_repo_main/main/everything_in_one/ptero_panel_nginx_mysql.sh);;
     5) echo "Not Developed Yet!";;
     6) echo "Not Developed Yet!";;
     7) echo "Not Developed Yet!";;
