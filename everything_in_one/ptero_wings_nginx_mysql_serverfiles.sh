@@ -61,11 +61,11 @@ echo "Trying To Zip all The Wings data"
 
 echo ""
 echo "it might takes few minutes according to the size of wings."
-
+echo "starting process"
 /bin/sleep 3
 
 
-zip -r datawings.zip * /uploads/Backup/
+zip -r datawings.zip * 
 mv datawings.zip /uploads/Backup/
 
 echo ""
@@ -100,8 +100,8 @@ echo ""
 echo "getting the wings config files"
 
 cd /etc/pterodactyl/
-
-zip -r wings_config_folder.zip * /uploads/Backup/
+echo "starting process"
+zip -r wings_config_folder.zip * 
 mv wings_config_folder.zip /uploads/Backup/
 
 
