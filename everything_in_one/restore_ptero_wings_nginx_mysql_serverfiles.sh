@@ -12,7 +12,7 @@ fi
 
 
 echo ""
-echo "Warning: Make Sure You Have Pterodactyl Panel Installed On This Server, In Order To Resotre All The Backups!"
+echo "Warning: Make Sure You Have Pterodactyl Wing Installed On This Server, In Order To Resotre All The Backups!"
 
 
 /bin/sleep 1
