@@ -19,6 +19,10 @@ echo "Mention The Amout Of Swap You Wanna Install in GB (ex. 200)"
 
 read swp_space
 
+echo "Please Mention The Path to Swap File, (/mnt/)"
+
+read swp_path
+
 echo ""
 echo "Defining Variables"
 swp_g="$swp_space""g"
@@ -30,11 +34,11 @@ swp_gib_swp="$swp_space""GiB.swap"
 
 /bin/sleep 1
 
-fallocate -l $swp_g /mnt/$swp_gib_swp
+fallocate -l $swp_g $swp_path$swp_gib_swp
 
 /bin/sleep 1
 
-chmod 600 /mnt/$swp_gib_swp
+chmod 600 $swp_path$swp_gib_swp
 
 /bin/sleep 1
 
@@ -42,11 +46,11 @@ ls /mnt/
 
 /bin/sleep 1
 
-sudo mkswap /mnt/$swp_gib_swp
+sudo mkswap $swp_path$swp_gib_swp
 
 /bin/sleep 1
 
-sudo swapon /mnt/$swp_gib_swp
+sudo swapon $swp_path$swp_gib_swp
 
 /bin/sleep 1
 
@@ -58,7 +62,7 @@ echo "Defining FileName"
 
 free -h
 
-echo "/mnt/$swp_gib_swp swap swap defaults 0 0" | sudo tee -a /etc/fstab
+echo "$swp_path$swp_gib_swp swap swap defaults 0 0" | sudo tee -a /etc/fstab
 /bin/sleep 1
 
 echo ""
@@ -68,7 +72,4 @@ echo "Rebooting The System"
 
 /bin/sleep 1
 
-
-reboot
-
-free -h
+echo ": Run Reboot To enable Swap"
